@@ -19,6 +19,7 @@ class Product {
 		this.productPrice = productPrice;
 	}
 
+	//Getters-setters method for the attributes
 	public String getProductName() {
 		return productName;
 	}
