@@ -88,10 +88,10 @@ class FlatDiscountProduct extends Product {
 
 public class InheritanceQues2 {
     public static void main(String[] args) {
-        PercentageDiscountProduct percentageDiscountProduct = new PercentageDiscountProduct("Mi Pro 5", 25000, 9);
+        PercentageDiscountProduct percentageDiscountProduct = new PercentageDiscountProduct("Samsung Galaxy M21", 18000, 20);
 		System.out.println(percentageDiscountProduct.calculateDiscountedPrice());
 
-		FlatDiscountProduct flatDiscountProduct = new FlatDiscountProduct("T-Shirt(Size-40)", 1100, 55);
-		System.out.println(flatDiscountProduct.calculateDiscountedPrice());
+		FlatDiscountProduct flatDiscountProduct = new FlatDiscountProduct("T-Shirt", 1100, 50);
+		System.out.println("After Discount Price is: " + flatDiscountProduct.calculateDiscountedPrice());
     }
 }
