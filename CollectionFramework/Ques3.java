@@ -6,29 +6,32 @@ import java.util.ArrayList;
 
 public class Ques3 {
     public static void main(String[] args) {
-        //creating the ArrayList of Integers
-        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        // Creating an ArrayList of integers
+        ArrayList<Integer> numberList = new ArrayList<>();
 
-        //adding element to ArrayList
-        list1.add(1);
-        list1.add(2);
-        list1.add(3);
+        // Adding elements to the ArrayList
+        numberList.add(1);
+        numberList.add(2);
+        numberList.add(3);
 
-        //Display content of ArrayList
-        System.out.println("Created ArrayList: " + list1);
+        // Displaying the size and (indirectly) the initial capacity of the ArrayList
+        System.out.println("Initial size: " + numberList.size());
+        System.out.println("Initial capacity (indirect): " + getCapacity(numberList));
 
-        System.out.println("Size of ArrayList: " + list1.size());
+        // Adding 5 more elements to the ArrayList
+        numberList.add(4);
+        numberList.add(5);
+        numberList.add(6);
+        numberList.add(7);
+        numberList.add(8);
 
-        //adding 5 more elements
-        list1.add(3);
-        list1.add(4);
-        list1.add(5);
-        list1.add(6);
-        list1.add(7);
+        // Displaying the size and (indirectly) the updated capacity of the ArrayList
+        System.out.println("Updated size: " + numberList.size());
+        System.out.println("Updated capacity (indirect): " + getCapacity(numberList));
+    }
 
-        //After adding display new ArrayList
-        System.out.println("New ArrayList: " + list1);
-        System.out.println("New size: " + list1.size());
-
+    // A method to indirectly get the capacity of an ArrayList
+    private static int getCapacity(ArrayList<?> list) {
+        return ((Object[]) list.toArray()).length;
     }
 }
